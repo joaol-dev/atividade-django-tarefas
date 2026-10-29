@@ -19,7 +19,7 @@ python manage.py migrate
 python manage.py runserver
 
 ## Dificuldade encontrada
-(escreva um problema real que você teve e como resolveu)
+Na parte de criar o usuario tive certa dificuldade por não conseguir colocar a senha
 
 ## Créditos
 A base do projeto (Semana 6) foi desenvolvida em grupo:
