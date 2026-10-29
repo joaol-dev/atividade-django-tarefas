@@ -6,69 +6,22 @@
 - José Carlos Silva Pimentel - 202422916
 - Adriel dos Santos Azevedo - 202422733
 
-## Objetivo
+# Atividade Django: Persistindo tarefas e categorias
 
-Criar a primeira interface web do Sistema de Gestão de Tarefas utilizando o framework Django, aplicando conceitos de projeto, aplicação, rotas (URLs), views e templates.
+Sistema de Gestão de Tarefas com Django. Models Categoria e Tarefa,
+migrações, Django Admin e consultas com ORM.
 
-## Funcionalidades
-
-### Página inicial (`/`)
-Exibe um título, um texto de boas-vindas e um link para a lista de tarefas.
-
-### Lista de tarefas (`/tarefas/`)
-Exibe as tarefas cadastradas (título, prioridade e situação) usando `{% for %}` para percorrer a lista e `{% if %}` para tratar o caso de lista vazia. No momento, os dados são temporários e ficam definidos diretamente na view.
-
-## Conceitos utilizados
-- Estrutura de projeto Django (`startproject` e `startapp`)
-- `INSTALLED_APPS`
-- Roteamento de URLs (`urls.py` da app + `include()` no projeto)
-- Views baseadas em função
-- Templates com herança de pasta (`tarefas/templates/tarefas/`)
-- Tags de template `{% for %}`, `{% if %}` e `{% url %}`
-
-## Estrutura da atividade
-
-```text
-gestao_tarefas_django/
-├── manage.py
-├── requirements.txt
-├── gestao_tarefas/
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│   └── asgi.py
-└── tarefas/
-    ├── urls.py
-    ├── views.py
-    └── templates/
-        └── tarefas/
-            ├── inicio.html
-            └── lista.html
-```
-
-## Execução
-
-Crie e ative um ambiente virtual, depois instale as dependências:
-
-```bash
+## Como rodar
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+venv\Scripts\activate
 pip install -r requirements.txt
-```
-
-Inicie o servidor:
-
-```bash
+python manage.py migrate
 python manage.py runserver
-```
 
-Acesse no navegador:
-- `http://127.0.0.1:8000/` — página inicial
-- `http://127.0.0.1:8000/tarefas/` — lista de tarefas
+## Dificuldade encontrada
+(escreva um problema real que você teve e como resolveu)
 
-## Limitações
-
-As tarefas exibidas são dados temporários definidos na view `lista_tarefas`. Não há banco de dados nem persistência entre execuções nesta etapa.
-
-## Extensão opcional
-Possíveis evoluções: adicionar uma terceira tarefa, criar uma página de detalhes por índice, aplicar CSS para diferenciar tarefas pendentes/concluídas, ou filtrar apenas as pendentes na view.
+## Créditos
+A base do projeto (Semana 6) foi desenvolvida em grupo:
+João Lucas Binttencourt Rocha, João Pedro Oliveira,
+José Carlos Silva Pimentel e Adriel dos Santos Azevedo.
